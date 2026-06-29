@@ -58,6 +58,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build & Push Docker image
-          run: |
-            docker build -t ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest -f demo/Dockerfile demo
-            docker push ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
+            run: |
+              docker build -t ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest -f demo/Dockerfile demo
+              docker push ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
+  
