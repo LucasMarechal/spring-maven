@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Build, Test & Sonar
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
 
   docker:
     name: Build, Scan & Push Docker Image
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
